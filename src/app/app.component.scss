@@ -1,0 +1,195 @@
+
+@font-face {
+  font-family: blackwoodCastle;
+  src: url("../assets/BlackwoodCastle.ttf");
+}
+
+.container {
+    text-align: center;
+    background-color: #00b8ffa3;
+    background: linear-gradient(to top, #00b8ffa3, #00b8ffa3 60%, #2847b8e6);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0) translateY(0px); }
+    25% { transform: rotate(2deg) translateY(10px); }
+    75% { transform: rotate(-2deg) translateY(-10px);}
+  }
+
+  @keyframes slide{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-1600px); }
+  }
+
+  .boat-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  .boat {
+    position: absolute;
+    bottom: 10px;
+    transform-origin: bottom center;
+    animation: swing 10s linear;
+    animation-iteration-count: infinite;
+    max-width: 700px;
+    height: auto;
+  }
+
+  .text-container {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-family: blackwoodCastle;
+    font-size: 500%;
+  }
+
+  .cloud {
+    height: 300px;
+    width: 4800px;
+    position: absolute;
+  }
+  .bigclouds {
+    background: url("../assets/bigclouds.png") repeat-x;
+    z-index: -100;
+    top: 50px;
+    animation: slide 80s linear infinite;
+  }
+  .medclouds {
+    background: url("../assets/mediumclouds.png") repeat-x;
+    z-index: -101;
+    top: 150px;
+    animation: slide 60s linear infinite;
+  }
+  .smallclouds {
+    background: url("../assets/smallclouds.png") repeat-x;
+    z-index: -102;
+    top: 60px;
+    animation: slide 100s linear infinite;
+  }
+  .tinyclouds {
+    background: url("../assets/tinyclouds.png") repeat-x;
+    z-index: -103;
+    top: 50px;
+    animation: slide 120s linear infinite;
+  }
+  .weirdclouds {
+    background: url("../assets/weirdclouds.png") repeat-x;
+    z-index: -104;
+    top: 40px;
+    animation: slide 70s linear infinite;
+  }
+
+  .wave {
+    width: 4800px;
+    position: absolute;
+    bottom: 0;
+  }
+  .bigwaves {
+    background: url("../assets/bigwaves.png") repeat-x;
+    height: 275px;
+    animation: slide 40s linear infinite;
+    z-index: 400;
+  }
+  .bigwaves2 {
+    background: url("../assets/bigwaves.png") repeat-x;
+    height: 270px;
+    animation: slide 35s linear infinite;
+    left: 300px;
+    z-index: 400;
+  }
+  .medwaves {
+    background: url("../assets/mediumwaves.png") repeat-x;
+    height: 300px;
+    animation: slide 50s linear infinite;
+    z-index: 300;
+  }
+  .medwaves2 {
+    background: url("../assets/mediumwaves.png") repeat-x;
+    height: 300px;
+    animation: slide 45s linear infinite;
+    left: 300px;
+    z-index: 300;
+  }
+  .smallwaves {
+    background: url("../assets/smallwaves.png") repeat-x;
+    height: 325px;
+    animation: slide 70s linear infinite;
+    z-index: -100;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .text-container {
+      top: 30px;
+      left: unset;
+      width: 100%;
+    }
+    .title {
+      font-size: 350%;
+    }
+    .boat {
+      max-width: 400px;
+      bottom: -10px;
+    }
+    .bigwaves {
+      height: 225px;
+    }
+    .bigwaves2 {
+      height: 220px;
+    }
+    .medwaves {
+      height: 250px;
+    }
+    .smallwaves {
+      height: 275px;
+    }
+  }
+  @media only screen and (min-width: 450px) and (max-width: 600px) {
+    .text-container {
+      top: 30px;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    .title {
+      font-size: 400%;
+    }
+    .boat {
+      max-width: 450px;
+      bottom: -10px;
+    }
+    .bigwaves {
+      height: 225px;
+    }
+    .bigwaves2 {
+      height: 220px;
+    }
+    .medwaves {
+      height: 250px;
+    }
+    .smallwaves {
+      height: 275px;
+    }
+  }
+@media only screen and (min-width: 600px) and (max-width: 950px) {
+    .text-container {
+      top: 30px;
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    .title {
+      font-size: 600%;
+    }
+    .boat {
+      max-width: 600px;
+      bottom: 15px;
+    }
+  }
